@@ -6,4 +6,4 @@ before_install:
   - docker build -t grigatr/docker-react -f dockerfile.dev .
 
 script:
-  - docker run grigatr/docker-react npm run test -- --coverage
+  - docker run -e CI=true grigatr/docker-react npm run test
